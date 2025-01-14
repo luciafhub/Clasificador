@@ -19,28 +19,27 @@ Este proyecto es una aplicación web desarrollada con **Streamlit** que permite 
 1. **Carga de archivos PDF:** Sube uno o varios PDFs usando el botón de carga.  
 2. **Procesamiento:** El sistema analiza los PDFs y clasifica los documentos.  
 3. **Descarga:**  
-   - PDFs correctamente clasificados.  
+   - PDFs correctamente filtrados por ingeniería.  
    - ZIP con PDFs que presentaron errores.  
-4. **Filtrado por ingeniería:** Selecciona la ingeniería para ver los PDFs relacionados.  
+
 
 ## 📄 Estructura del Proyecto
 
-├── clasificador.py # Código principal de la app ├── plantilla_casillas.jpg # Plantilla para recortar las imágenes ├── temp_output/ # Carpeta temporal para imágenes procesadas ├── requirements.txt # Dependencias necesarias └── README.md # Documentación del proyecto
+├── clasificador.py # Código principal de la app
+├── plantilla_casillas.jpg # Plantilla para recortar las imágenes
+├── temp_output/ # Carpeta temporal para imágenes procesadas
+├── requirements.txt # Dependencias necesarias
+└── README.md # Documentación del proyecto
 
 
 
 ## 🐞 Posibles errores
 
 - **Error en la carga de imágenes:** Puede ser por PDFs corruptos o casillas ilegibles.  
-- **Error de dependencias:** Asegúrate de usar `opencv-python-headless` en lugar de `opencv-python` en Streamlit Cloud.  
 
 ## 🤝 Contribuciones
 
 ¡Las contribuciones son bienvenidas! Abre un issue o envía un pull request.
-
-## 📜 Licencia
-
-Este proyecto está bajo la licencia MIT.
 
 ---
 
