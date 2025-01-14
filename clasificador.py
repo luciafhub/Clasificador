@@ -320,6 +320,3 @@ if uploaded_files:
                 )
         else:
             st.write("No hay PDFs disponibles para esta ingeniería.")
-
-
-# Lucía Fernández Rodríguez
