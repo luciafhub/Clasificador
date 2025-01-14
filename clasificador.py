@@ -181,7 +181,7 @@ def process_and_classify(uploaded_files, template_path, output_folder):
 st.title("Clasificador de Prácticas por Grado para EPI Gijón")
 
 # Imagen principal
-st.image("b.png", caption="Organiza tus ofertas de prácticas de empresas de forma eficiente", use_column_width=True)
+st.image("b.png", caption="Organiza tus ofertas de prácticas de empresas de forma eficiente", use_container_width=True)
 
 
 # Barra lateral con la introducción
