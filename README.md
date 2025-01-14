@@ -10,7 +10,7 @@ Este proyecto es una aplicación web desarrollada con **Streamlit** que permite 
 
 - **Conversión de PDFs a imágenes:** Convierte la primera página del PDF a JPG.  
 - **Recorte de imágenes:** Utiliza una plantilla para recortar áreas específicas de las imágenes.  
-- **Análisis de casillas:** Detecta si las casillas están marcadas o no.  
+- **Análisis de casillas:** Detecta si las casillas están marcadas o no según su zona central.  
 - **Clasificación automática:** Organiza los PDFs según la ingeniería seleccionada.  
 - **Gestión de errores:** Los PDFs que no se procesan correctamente se agrupan en un ZIP descargable.  
 
