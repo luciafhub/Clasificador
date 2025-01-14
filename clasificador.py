@@ -106,27 +106,34 @@ def pdf_to_jpg(pdf_path, output_folder):
     return output_path
 
 # Función para recortar la imagen usando una plantilla
-def crop_with_template(image_path, template_path, output_path):
-    image = cv2.imread(image_path)
-    template = cv2.imread(template_path, 0)
+def crop_with_template(image_path, template_path, output_path, problematic_images, pdf_name):
+    try:
+        image = cv2.imread(image_path)
+        template = cv2.imread(template_path, 0)
 
-    if image is None or template is None:
-        raise FileNotFoundError("No se pudo cargar la imagen o la plantilla")
+        if image is None or template is None:
+            raise FileNotFoundError("No se pudo cargar la imagen o la plantilla")
 
-    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    result = cv2.matchTemplate(gray_image, template, cv2.TM_CCOEFF_NORMED) # con matchTemplate 
-    _, _, _, max_loc = cv2.minMaxLoc(result)
-    x, y = max_loc
-    h, w = template.shape
+        gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        result = cv2.matchTemplate(gray_image, template, cv2.TM_CCOEFF_NORMED)
+        _, _, _, max_loc = cv2.minMaxLoc(result)
+        x, y = max_loc
+        h, w = template.shape
 
-    cropped_img = image[y:y+h, x:x+w]
-    
-    if cropped_img is None:
-        raise ValueError(f"La imagen recortada está vacía. Revisa la plantilla: {template_path}")
-    cv2.imwrite(output_path, cropped_img)
+        cropped_img = image[y:y+h, x:x+w]
 
-    
-    cv2.imwrite(output_path, cropped_img)
+        if cropped_img is None or cropped_img.size == 0:
+            raise ValueError("El recorte de la imagen falló. Verifica la plantilla o la imagen de entrada.")
+
+        if not os.path.exists(os.path.dirname(output_path)):
+            os.makedirs(os.path.dirname(output_path))
+
+        cv2.imwrite(output_path, cropped_img)
+
+    except Exception as e:
+        print(f"Error al procesar {pdf_name}: {e}")
+        problematic_images.append(pdf_name)
+
 
 # Función para analizar casillas revisando el centro
 def analyze_casillas_by_center(image_path):
