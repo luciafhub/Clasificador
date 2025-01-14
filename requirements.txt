@@ -9,4 +9,4 @@ statsmodels
 plotly
 PyMuPDF
 Pillow
-opencv-python
+opencv-python-headless
