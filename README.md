@@ -20,18 +20,8 @@ Este proyecto es una aplicación web desarrollada con **Streamlit** que permite 
 2. **Procesamiento:** El sistema analiza los PDFs y clasifica los documentos.  
 3. **Descarga:**  
    - PDFs correctamente filtrados por ingeniería.  
-   - ZIP con PDFs que presentaron errores.  
-
-
-## 📄 Estructura del Proyecto
-
-├── clasificador.py # Código principal de la app
-├── plantilla_casillas.jpg # Plantilla para recortar las imágenes
-├── temp_output/ # Carpeta temporal para imágenes procesadas
-├── requirements.txt # Dependencias necesarias
-└── README.md # Documentación del proyecto
-
-
+   - ZIP con PDFs que presentaron errores.
+   
 
 ## 🐞 Posibles errores
 
