@@ -174,7 +174,8 @@ def process_and_classify(uploaded_files, template_path, output_folder):
         cropped_path = os.path.join(output_folder, f"cropped_{os.path.basename(jpg_path)}")
 
         try:
-            crop_with_template(jpg_path, template_path, cropped_path)
+            crop_with_template(jpg_path, template_path, cropped_path, st.session_state.problematic_images, uploaded_file.name)
+
             results = analyze_casillas_by_center(cropped_path)
 
             if len(results) != 9:
