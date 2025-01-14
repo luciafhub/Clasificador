@@ -118,6 +118,11 @@ def crop_with_template(image_path, template_path, output_path):
     _, _, _, max_loc = cv2.minMaxLoc(result)
     x, y = max_loc
     h, w = template.shape
+
+    if cropped_img is None:
+        raise ValueError(f"La imagen recortada está vacía. Revisa la plantilla: {template_path}")
+    cv2.imwrite(output_path, cropped_img)
+
     cropped_img = image[y:y+h, x:x+w]
     cv2.imwrite(output_path, cropped_img)
 
