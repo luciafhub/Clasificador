@@ -1,6 +1,6 @@
 # Clasificador de Prácticas por Grado para EPI Gijón
 
-Este proyecto es una aplicación web desarrollada con **Streamlit** que permite clasificar archivos PDF de prácticas de empresa según las casillas marcadas, organizándolos automáticamente por grado de ingeniería.
+Este proyecto es una aplicación web desarrollada con Streamlit que permite clasificar archivos PDF de prácticas de empresa según las casillas marcadas, organizándolos automáticamente por grado de ingeniería.
 
 ## 🌐 Acceso a la Aplicación
 
