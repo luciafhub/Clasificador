@@ -33,6 +33,33 @@ Dentro de la carpeta **`pruebas/`** se encuentra un script llamado **`script_ver
 - La verificación demuestra que el clasificador alcanza una **precisión del 100%** sobre un conjunto de **142 PDFs**.
 
 
+## ⚙️ Explicación detallada del funcionamiento
+
+### 1. Conversión de PDFs a Imágenes JPG
+El programa utiliza la librería **PyMuPDF (fitz)** para abrir cada PDF y extraer su primera página. Esta página se convierte en una imagen **JPG** con alta resolución (**300 DPI**) para asegurar que los detalles de las casillas sean legibles.
+
+- **Función:** `pdf_to_jpg()`  
+- **Objetivo:** Facilitar el análisis visual de los documentos.
+
+### 2. Recorte de la Zona de Casillas
+Para centrar el análisis en la parte relevante del documento, el programa emplea la librería **OpenCV** y una imagen de referencia (`plantilla_casillas.jpg`) para identificar y recortar automáticamente la sección donde están ubicadas las casillas.
+
+- **Función:** `crop_with_template()`  
+- **Técnica:** Coincidencia de plantillas (`cv2.matchTemplate`) para encontrar la zona exacta.
+
+### 3. Detección de Casillas Marcadas
+Una vez recortada la zona de casillas, se convierte a escala de grises y se binariza para resaltar las áreas marcadas. Luego, el programa detecta los contornos de cada casilla y analiza el píxel central para determinar si está marcada.
+
+- **Función:** `analyze_casillas_by_center()`  
+- **Criterio:** Si el centro de la casilla es mayoritariamente oscuro (valor binario **255**), se considera **"Marcada"**; de lo contrario, **"No marcada"**.
+
+### 4. Clasificación Automática por Ingeniería
+Cada casilla representa un grado de ingeniería específico. El programa asocia automáticamente los PDFs a la ingeniería correspondiente según qué casillas estén marcadas.
+
+- **Función:** `process_and_classify()`  
+- **Resultado:** Los PDFs se organizan en categorías según la ingeniería seleccionada.
+
+
 ## 🐞 Posibles errores
 
 - **Error en el procesamiento de casillas:** Puede ser por PDFs con un formato inesperado o casillas ilegibles. Si esto sucede, se guardan en una carpeta para descargar los PDFs problemáticos y así revisarlos manualmente.
