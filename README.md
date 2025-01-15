@@ -35,7 +35,7 @@ Dentro de la carpeta **`pruebas/`** se encuentra un script llamado **`script_ver
 
 ## 🐞 Posibles errores
 
-- **Error en la carga de imágenes:** Puede ser por PDFs corruptos o casillas ilegibles.  
+- **Error en el procesamiento de casillas:** Puede ser por PDFs con un formato inesperado o casillas ilegibles. Se guardan en una carpeta para descargar los PDFs problemáticos.
 
 ## 🤝 Contribuciones
 
