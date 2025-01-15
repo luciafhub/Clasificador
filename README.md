@@ -35,7 +35,7 @@ Dentro de la carpeta **`pruebas/`** se encuentra un script llamado **`script_ver
 
 ## 🐞 Posibles errores
 
-- **Error en el procesamiento de casillas:** Puede ser por PDFs con un formato inesperado o casillas ilegibles. Se guardan en una carpeta para descargar los PDFs problemáticos.
+- **Error en el procesamiento de casillas:** Puede ser por PDFs con un formato inesperado o casillas ilegibles. Si esto sucede, se guardan en una carpeta para descargar los PDFs problemáticos y así revisarlos manualmente.
 
 ## 🤝 Contribuciones
 
