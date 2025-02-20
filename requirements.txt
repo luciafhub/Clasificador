@@ -1,6 +1,12 @@
 streamlit
-googletrans==4.0.0rc1
-SpeechRecognition
-PyAudio
-transformers
-crossrefapi
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+wordcloud
+statsmodels
+plotly
+PyMuPDF
+Pillow
+opencv-python-headless
