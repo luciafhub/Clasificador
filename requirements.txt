@@ -1,12 +1,5 @@
 streamlit
-pandas
-numpy
-matplotlib
-seaborn
-scikit-learn
-wordcloud
-statsmodels
-plotly
-PyMuPDF
-Pillow
-opencv-python-headless
+googletrans
+SpeechRecognition
+transformers
+crossrefapi
