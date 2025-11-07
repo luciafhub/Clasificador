@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación web desarrollada con Streamlit que permite clasificar archivos PDF de prácticas de empresa según las casillas marcadas, organizándolos automáticamente por grado de ingeniería. 
 
-Creado en 2024 y usado por más de 400 estudiantes de ingeniería el mes de lanzamiento.
+Creado en 2024 y usado por más de 400 estudiantes de ingeniería el mismo mes del lanzamiento.
 
 ## 🌐 Acceso a la Aplicación
 
